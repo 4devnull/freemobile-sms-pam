@@ -61,7 +61,6 @@ OpenSSH:
 
 $ sudo nano /etc/pam.d/sshd
 
-# Configure SMS validation code for authentication
 auth required pam_freesms.so nullok
 
 2. Activer l’authentification par challenge-response dans le fichier de configuration de 
@@ -69,8 +68,6 @@ OpenSSH :
 
 $ sudo nano /etc/ssh/sshd_config
 
-# Change to yes to enable challenge-response passwords (beware issues with
-# some PAM modules and threads)
 ChallengeResponseAuthentication yes
 
 3. Redémarrer le service OpenSSH
