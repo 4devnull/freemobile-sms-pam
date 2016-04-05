@@ -56,27 +56,27 @@ tests, mais pas en production).
 
 Dans la plupart des cas, vous devrez simplement effectuer les opérations suivantes :
 
-1. Ajouter les lignes suivantes dans le fichier de configuration du module PAM avec 
+1.Ajouter les lignes suivantes dans le fichier de configuration du module PAM avec 
 OpenSSH:
 
 $ sudo nano /etc/pam.d/sshd
 
 auth required pam_freesms.so nullok
 
-2. Activer l’authentification par challenge-response dans le fichier de configuration de 
+2.Activer l’authentification par challenge-response dans le fichier de configuration de 
 OpenSSH :
 
 $ sudo nano /etc/ssh/sshd_config
 
 ChallengeResponseAuthentication yes
 
-3. Redémarrer le service OpenSSH
+3.Redémarrer le service OpenSSH
 
 $ sudo service ssh restart
 
-4. Configurer le fichier ~/.freesms
+4.Configurer le fichier ~/.freesms
 
-5. Tester la connection en localhost AVANT de vous déconnecter ou de redémarrer la machine !!
+5.Tester la connection en localhost AVANT de vous déconnecter ou de redémarrer la machine !!
 
 $ ssh user@localhost ou $ ssh user@127.0.0.1
 Password: *******************
